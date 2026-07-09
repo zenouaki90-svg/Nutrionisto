@@ -1,9 +1,14 @@
 :root {
-    --primary: #2ec4b6;       /* Verde menta energético */
-    --secondary: #0f172a;     /* Azul oscuro/grisáceo */
-    --accent: #ff9f1c;        /* Naranja llamada a la acción */
-    --light-bg: #f8fafc;      /* Fondo claro neutral */
-    --text-main: #334155;     /* Texto principal legible */
+    --primary: #2ec4b6;
+    /* Verde menta energético */
+    --secondary: #0f172a;
+    /* Azul oscuro/grisáceo */
+    --accent: #ff9f1c;
+    /* Naranja llamada a la acción */
+    --light-bg: #f8fafc;
+    /* Fondo claro neutral */
+    --text-main: #334155;
+    /* Texto principal legible */
     --white: #ffffff;
     --error: #ef4444;
     --success: #22c55e;
@@ -158,8 +163,8 @@ h2.section-title::after {
    SECCIÓN HERO / PORTADA
    ========================================================================== */
 .hero {
-    background: linear-gradient(rgba(46, 196, 182, 0.15), rgba(15, 23, 42, 0.85)), 
-                url('/Img/Dietitian-vs.-Nutritionist-1.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(46, 196, 182, 0.15), rgba(15, 23, 42, 0.85)),
+        url('/Img/Dietitian-vs.-Nutritionist-1.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -314,7 +319,7 @@ h2.section-title::after {
     font-weight: 600;
 }
 
-.form-group input, 
+.form-group input,
 .form-group textarea {
     width: 100%;
     padding: 12px;
@@ -326,7 +331,7 @@ h2.section-title::after {
     transition: var(--transition);
 }
 
-.form-group input:focus, 
+.form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
@@ -401,7 +406,8 @@ h2.section-title::after {
 .back-to-top {
     position: fixed;
     bottom: 30px;
-    right: -60px; /* Oculto por defecto */
+    right: -60px;
+    /* Oculto por defecto */
     width: 45px;
     height: 45px;
     background-color: var(--accent);
@@ -455,4 +461,3 @@ h2.section-title::after {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
