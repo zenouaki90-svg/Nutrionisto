@@ -164,7 +164,7 @@ h2.section-title::after {
    ========================================================================== */
 .hero {
     background: linear-gradient(rgba(46, 196, 182, 0.15), rgba(15, 23, 42, 0.85)),
-        url('/Img/Dietitian-vs.-Nutritionist-1.jpg') no-repeat center center/cover;
+        url('Img/Dietitian-vs.-Nutritionist-1.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
