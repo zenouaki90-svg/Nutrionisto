@@ -1,0 +1,458 @@
+:root {
+    --primary: #2ec4b6;       /* Verde menta energético */
+    --secondary: #0f172a;     /* Azul oscuro/grisáceo */
+    --accent: #ff9f1c;        /* Naranja llamada a la acción */
+    --light-bg: #f8fafc;      /* Fondo claro neutral */
+    --text-main: #334155;     /* Texto principal legible */
+    --white: #ffffff;
+    --error: #ef4444;
+    --success: #22c55e;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* Modo Oscuro Opcional */
+body.dark-theme {
+    --light-bg: #0f172a;
+    --secondary: #f8fafc;
+    --text-main: #cbd5e1;
+    --white: #1e293b;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   RESET & ESTILOS GENERALES (Mobile First)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h2.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--secondary);
+    position: relative;
+}
+
+/* Pseudo-elemento (::after) requerido */
+h2.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary);
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   HEADER & NAVEGACIÓN (Sticky/Fixed)
+   ========================================================================== */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.logo h1 span {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+/* Menú móvil oculto por defecto */
+.main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    display: none;
+    padding: 20px 0;
+}
+
+.main-nav.active {
+    display: block;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.main-nav a:hover {
+    color: var(--primary);
+}
+
+.btn-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   SECCIÓN HERO / PORTADA
+   ========================================================================== */
+.hero {
+    background: linear-gradient(rgba(46, 196, 182, 0.15), rgba(15, 23, 42, 0.85)), 
+                url('/Img/Dietitian-vs.-Nutritionist-1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 60px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+/* Transición / Animación Hover requerida */
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(255, 159, 28, 0.4);
+}
+
+/* ==========================================================================
+   SECCIÓN SERVICIOS (Grid & Cards)
+   ========================================================================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: calc(var(--radius) - 4px);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+
+/* ==========================================================================
+   SECCIÓN SOBRE NOSOTROS (Flexbox)
+   ========================================================================== */
+.about {
+    background-color: var(--white);
+}
+
+.about-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-img img {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.about-text h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   SECCIÓN TESTIMONIOS (Grid)
+   ========================================================================== */
+.testimonials {
+    background-color: var(--light-bg);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.testimonial-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary);
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   SECCIÓN CONTACTO (Formulario & Validación)
+   ========================================================================== */
+.contact {
+    background-color: var(--white);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    background-color: var(--white);
+    color: inherit;
+    transition: var(--transition);
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(46, 196, 182, 0.2);
+}
+
+.error-msg {
+    color: var(--error);
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.success-msg {
+    color: var(--success);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-submit:hover {
+    background-color: #24a89c;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.main-footer {
+    background-color: var(--secondary);
+    color: #94a3b8;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--primary);
+}
+
+/* ==========================================================================
+   BOTÓN VOLVER ARRIBA
+   ========================================================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: -60px; /* Oculto por defecto */
+    width: 45px;
+    height: 45px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.back-to-top.show {
+    right: 30px;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Layout adaptable a Tablets y Desktops)
+   ========================================================================== */
+
+/* TABLETS (Mínimo 768px) */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .main-nav {
+        position: static;
+        display: block;
+        width: auto;
+        box-shadow: none;
+        padding: 0;
+        background: transparent;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .hero-content h2 {
+        font-size: 3.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

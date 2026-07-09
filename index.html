@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriVida | Nutrición Integral</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS Estilos -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!-- 1. HEADER -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Get<span>Fit</span><span>byNaoufal</span></h1>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><button id="dark-mode-btn" class="btn-toggle">🌙</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. HERO / PORTADA -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>Transforma tu salud con una alimentación real</h2>
+                <p>Planes nutricionales personalizados para alcanzar tus metas sin pasar hambre ni restricciones
+                    extremas.</p>
+                <a href="#contacto" class="btn-cta">Empieza tu cambio hoy</a>
+            </div>
+        </section>
+
+        <!-- 3. SERVICIOS -->
+        <section id="servicios" class="services">
+            <div class="container">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <div class="services-grid">
+                    <div class="card">
+                        <img src="/Img/diseño-plano-del-icono-de-la-dieta-médica-plan-nutrición-junta-con-manzana-201338393.webp"
+                            alt="Icono de plan nutricional personalizado">
+                        <h3>Planes Personalizados</h3>
+                        <p>Evaluación completa y menús adaptados a tus gustos, horarios y necesidades biológicas
+                            individuales.</p>
+                    </div>
+                    <div class="card">
+                        <img src="/Img/images001.jpeg" alt="Icono de rendimiento deportivo">
+                        <h3>Nutrición Deportiva</h3>
+                        <p>Optimiza tu rendimiento, mejora tu recuperación y alcanza tus objetivos de masa muscular o
+                            definición.</p>
+                    </div>
+                     <div class="card">
+                        <img src="/Img/1349366.png"
+                            alt="Icono de Evaluación inicial">
+                        <h3>Evaluación inicial</h3>
+                        <p>Analiza tu historial clínico, hábitos, estilo de vida, horarios y analíticas para conocer tus necesidades exactas.</p>
+                    </div>
+                    <div class="card">
+                        <img src="/Img/depositphotos_107231000-stock-illustration-teaching-kids-eating-habits.webp"
+                            alt="Icono de educación alimentaria">
+                        <h3>Educación Alimentaria</h3>
+                        <p>Aprende a leer etiquetas, organizar tu compra semanal y derribar mitos sobre la comida de
+                            forma práctica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SOBRE NOSOTROS -->
+        <section id="sobre-mi" class="about">
+            <div class="container about-flex">
+                <div class="about-img">
+                    <img src="/Img/nutri.avif" alt="Nutricionista sonriendo en su consulta médica">
+                </div>
+                <div class="about-text">
+                    <h2>Sobre Mí</h2>
+                    <h3>Dr. Naoufal El Grande</h3>
+                    <p>Soy nutricionisto clínica con más de 8 años de experiencia ayudando a personas a sanar su
+                        relación con la comida. Mi enfoque no se basa en contar calorías, sino en crear hábitos
+                        sostenibles a largo plazo que mejoren tu vitalidad y salud integral.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. TESTIMONIOS -->
+        <section id="testimonios" class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Casos de Éxito</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-item">
+                        <p class="quote">"Logré bajar de peso sin sufrir y aprendí a comer de todo. Mi energía ha
+                            mejorado increíblemente."</p>
+                        <h4>- Carlos Mendoza</h4>
+                        <img src ="/Img/69495c15368655818d8cf848_chris's.webp">
+                    </div>
+                    <div class="testimonial-item">
+                        <p class="quote">"Excelente profesional. Se adaptó perfectamente a mis entrenamientos de
+                            maratón. Altamente recomendada."</p>
+                        <h4>- Laura Sofía</h4>
+                        <img src="/Img/loop-660be4152bd21.avif">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CONTACTO -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2 class="section-title">Agenda una Cita</h2>
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Nombre Completo:</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre">
+                        <span class="error-msg" id="name-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com">
+                        <span class="error-msg" id="email-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensaje / Motivo de consulta:</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Cuéntame brevemente tu objetivo..."></textarea>
+                        <span class="error-msg" id="message-error"></span>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    <div id="success-msg" class="success-msg"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- 7. FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 NutriVida. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+                <a href="https://www.linkedin.com/" target="_blank">Linkedin</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
